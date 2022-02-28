@@ -24,20 +24,24 @@ public class MainPage extends BasePage{
 
     final String SITE_URL = "https://passport.yandex.ru/auth?from=mail&origin=hostroot_homer_auth_ru&retpath=https%3A%2F%2Fmail.yandex.ru%2F&backpath=https%3A%2F%2Fmail.yandex.ru%3Fnoretpath%3D1";
 
-    public void goToUrl() {
+    public MainPage goToUrl() {
         driver.get(SITE_URL);
+        return this;
     }
 
-    public void pressLoginButton() {
+    public MainPage pressLoginButton() {
         loginButton.click();
+        return this;
     }
 
-    public void inputLogin() {
+    public MainPage inputLogin() {
         login.sendKeys("butin.nik.test@yandex.ru");
+        return this;
     }
 
-    public void inputPassword() {
+    public MainPage inputPassword() {
         password.sendKeys("nikita737");
+        return this;
     }
 
 }
