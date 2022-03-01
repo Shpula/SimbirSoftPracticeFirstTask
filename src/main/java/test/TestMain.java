@@ -1,5 +1,6 @@
 package test;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class TestMain extends TestBase {
@@ -13,8 +14,8 @@ public class TestMain extends TestBase {
                 .inputPassword()
                 .pressLoginButton();
         mailPage
-                .sendMailCase()
-                .checkCountMails();
+                .sendMailCase();
+        Assertions.assertTrue(mailPage.findsСurrentMailsCase() < mailPage.newCountMails);
 
 
     }

@@ -16,7 +16,7 @@ public class MailPage extends BasePage{
         super(driver);
     }
 
-    int newCountMails = 0;
+    public static int newCountMails = 0;
 
     @FindBy(xpath = "//span[text() = 'Написать']")
     WebElement createMailButton;
